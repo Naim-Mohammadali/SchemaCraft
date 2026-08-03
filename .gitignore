@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+Source/build/
+Source/dist/
+Source/*.spec
+*.exe
+*.AppImage
+
+# Real authentication and secrets
+Source/builder-auth.json
+Source/developer-access.key
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
+client_secret*.json
+service-account*.json
+
+# Runtime data
+Source/data/database.xlsx
+Source/data/schema.json
+Source/data/attachments/
+Source/data/logs/
+Source/data/backups/
+
+# Excel temporary files
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.old
+*.lock
+*.pid
+*.partial
+
+# Editors and OS files
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Release archives
+Assets/*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz

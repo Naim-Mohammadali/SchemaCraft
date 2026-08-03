@@ -1,0 +1,12 @@
+{
+  "name": "generic-data-entry-app-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Developer-only browser workflow tests for GenericSchemaCraft.",
+  "scripts": {
+    "test:ui": "node tests/test_ui_dom.js"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
