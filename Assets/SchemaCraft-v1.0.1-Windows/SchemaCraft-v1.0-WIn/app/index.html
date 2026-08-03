@@ -1,0 +1,1296 @@
+<!doctype html>
+
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="light" name="color-scheme" />
+    <meta
+      content="default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;"
+      http-equiv="Content-Security-Policy"
+    />
+    <title>نظام إدخال البيانات</title>
+    <meta content="#3367D6" name="theme-color" />
+    <link
+      href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2cHgiIGhlaWdodD0iMjU3cHgiIHZpZXdCb3g9IjAgMCAyNTYgMjU3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMzIuODEzMjIzNyUiIHkxPSIzMi41MzIzODQxJSIgeDI9IjExMy44NzYzMTYlIiB5Mj0iMTE0LjEzMjMxOCUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzI2MzIzOCIgc3RvcC1vcGFjaXR5PSIwLjIiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzI2MzIzOCIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjQzLjEzJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjQ5Ljk2NzEyNjklIiB4Mj0iMTAwJSIgeTI9IjQ5Ljk2NzEyNjklIiBpZD0ibGluZWFyR3JhZGllbnQtMiI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIHN0b3Atb3BhY2l0eT0iMC4xIiBvZmZzZXQ9IjAlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnPgogICAgICAgIDxwYXRoIGQ9Ik0yNTYsMjAuNTQ3MzY4NCBDMjU2LDkuMjYzMTU3ODkgMjQ2LjczNjg0MiwwIDIzNS40NTI2MzIsMCBMMjAuNTQ3MzY4NCwwIEM5LjI2MzE1Nzg5LC01Ljk4MzUxNzc3ZS0xNSAwLDkuMjYzMTU3ODkgMCwyMC41NDczNjg0IEwwLDIzNS42MjEwNTMgQzAsMjQ2LjkwNTI2MyA5LjI2MzE1Nzg5LDI1Ni4xNjg0MjEgMjAuNTQ3MzY4NCwyNTYuMTY4NDIxIEwxMjUuNjQyMTA1LDI1Ni4xNjg0MjEgQzE5Ny44OTQ3MzcsMjU2LjE2ODQyMSAyNTYsMjAxLjA5NDczNyAyNTYsMTI2LjY1MjYzMiBDMjU2LDEwNS40MzE1NzkgMjU2LDIwLjU0NzM2ODQgMjU2LDIwLjU0NzM2ODQgWiIgZmlsbD0iIzMzNjdENiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPHBhdGggZD0iTTI1NiwxMjYuNDg0MjExIEMyNTYsMTE5LjI0MjEwNSAyNTYsMTA0LjU4OTQ3NCAyNTYsODguNDIxMDUyNiBMMTY4Ljc1Nzg5NSwxLjY4NDIxMDUzIEwwLDE2OC40MjEwNTMgTDg3Ljc0NzM2ODQsMjU2IEwxMjUuNjQyMTA1LDI1NiBDMTk3Ljg5NDczNywyNTYgMjU2LDIwMC45MjYzMTYgMjU2LDEyNi40ODQyMTEgWiIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPHBhdGggZD0iTTc5LjMyNjMxNTgsMS42ODQyMTA1MyBMMjM1LjQ1MjYzMiwxLjY4NDIxMDUzIEMyNDYuNzM2ODQyLDEuNjg0MjEwNTMgMjU2LDEwLjk0NzM2ODQgMjU2LDIyLjIzMTU3ODkgTDI1NiwyMC41NDczNjg0IEMyNTYsOS4yNjMxNTc4OSAyNDYuNzM2ODQyLDAgMjM1LjQ1MjYzMiwwIEw3OS4zMjYzMTU4LDAgTDc5LjMyNjMxNTgsMS42ODQyMTA1MyBaIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iIG9wYWNpdHk9IjAuMiI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yMC41NDczNjg0LDAgQzkuMjYzMTU3ODksMCAwLDkuMjYzMTU3ODkgMCwyMC41NDczNjg0IEwwLDE2OC40MjEwNTMgQzAsMTY4LjQyMTA1MyA1MC42OTQ3MzY4LDE2OC40MjEwNTMgODQuMDQyMTA1MywxNjguNDIxMDUzIEMxMzEuODczNjg0LDE2OC40MjEwNTMgMTY4LjQyMTA1MywxMjkuNjg0MjExIDE2OC40MjEwNTMsODMuODczNjg0MiBMMTY4LjQyMTA1MywwIEwyMC41NDczNjg0LDAgWiIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPHBhdGggZD0iTTIwLjU0NzM2ODQsMCBDOS4yNjMxNTc4OSwwIDAsOS4yNjMxNTc4OSAwLDIwLjU0NzM2ODQgTDAsMTY4LjQyMTA1MyBDMCwxNjguNDIxMDUzIDUwLjY5NDczNjgsMTY4LjQyMTA1MyA4NC4wNDIxMDUzLDE2OC40MjEwNTMgQzEzMS44NzM2ODQsMTY4LjQyMTA1MyAxNjguNDIxMDUzLDEyOS42ODQyMTEgMTY4LjQyMTA1Myw4My44NzM2ODQyIEwxNjguNDIxMDUzLDAgTDIwLjU0NzM2ODQsMCBaIiBmaWxsPSIjNjRCNUY2Ij48L3BhdGg+CiAgICAgICAgPHBhdGggZD0iTTE2OC40MjEwNTMsMS42ODQyMTA1MyBMMjAuNTQ3MzY4NCwxLjY4NDIxMDUzIEM5LjI2MzE1Nzg5LDEuNjg0MjEwNTMgMCwxMC45NDczNjg0IDAsMjIuMjMxNTc4OSBMMCwyMC41NDczNjg0IEMwLDkuMjYzMTU3ODkgOS4yNjMxNTc4OSwwIDIwLjU0NzM2ODQsMCBMMTY4LjQyMTA1MywwIEwxNjguNDIxMDUzLDEuNjg0MjEwNTMgWiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIiBvcGFjaXR5PSIwLjIiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTI1LjY0MjEwNSwyNTQuMzE1Nzg5IEwyMC41NDczNjg0LDI1NC4zMTU3ODkgQzkuMjYzMTU3ODksMjU0LjMxNTc4OSAwLDI0NS4wNTI2MzIgMCwyMzMuNzY4NDIxIEwwLDIzNS40NTI2MzIgQzAsMjQ2LjczNjg0MiA5LjI2MzE1Nzg5LDI1NiAyMC41NDczNjg0LDI1NiBMMTI1LjY0MjEwNSwyNTYgQzE5Ny44OTQ3MzcsMjU2IDI1NiwyMDAuOTI2MzE2IDI1NiwxMjYuNDg0MjExIEMyNTYsMTI1Ljk3ODk0NyAyNTYsMTI1LjQ3MzY4NCAyNTYsMTI0LjggQzI1NiwxOTkuMjQyMTA1IDE5Ny44OTQ3MzcsMjU0LjMxNTc4OSAxMjUuNjQyMTA1LDI1NC4zMTU3ODkgWiIgZmlsbD0iIzI2MzIzOCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPHBhdGggZD0iTTI1NiwyMC41NDczNjg0IEMyNTYsOS4yNjMxNTc4OSAyNDYuNzM2ODQyLDAgMjM1LjQ1MjYzMiwwIEwyMC41NDczNjg0LDAgQzkuMjYzMTU3ODksLTUuOTgzNTE3NzdlLTE1IDAsOS4yNjMxNTc4OSAwLDIwLjU0NzM2ODQgTDAsMjM1LjYyMTA1MyBDMCwyNDYuOTA1MjYzIDkuMjYzMTU3ODksMjU2LjE2ODQyMSAyMC41NDczNjg0LDI1Ni4xNjg0MjEgTDEyNS42NDIxMDUsMjU2LjE2ODQyMSBDMTk3Ljg5NDczNywyNTYuMTY4NDIxIDI1NiwyMDEuMDk0NzM3IDI1NiwxMjYuNjUyNjMyIEMyNTYsMTA1LjQzMTU3OSAyNTYsMjAuNTQ3MzY4NCAyNTYsMjAuNTQ3MzY4NCBaIiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTIpIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+Cg=="
+      rel="icon"
+      type="image/svg+xml"
+    />
+    <link href="./styles.css?v=20260802-stable-rc1" rel="stylesheet" />
+    <script defer="" src="./app.js?v=20260802-stable-rc1"></script>
+  </head>
+  <body>
+    <svg aria-hidden="true" class="icon-sprite">
+      <symbol id="icon-search" viewbox="0 0 24 24">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="m20 20-4-4"></path>
+      </symbol>
+      <symbol id="icon-save" viewbox="0 0 24 24">
+        <path d="M5 3h12l2 2v16H5z"></path>
+        <path d="M8 3v6h8V3M8 21v-7h8v7"></path>
+      </symbol>
+      <symbol id="icon-plus" viewbox="0 0 24 24">
+        <path d="M12 5v14M5 12h14"></path>
+      </symbol>
+      <symbol id="icon-trash" viewbox="0 0 24 24">
+        <path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"></path>
+      </symbol>
+      <symbol id="icon-new" viewbox="0 0 24 24">
+        <path d="M6 3h8l4 4v14H6zM14 3v5h5M9 14h6M12 11v6"></path>
+      </symbol>
+      <symbol id="icon-settings" viewbox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path
+          d="M19 13.5v-3l-2-.7-.5-1.2.9-1.9-2.1-2.1-1.9.9-1.2-.5-.7-2h-3l-.7 2-1.2.5-1.9-.9-2.1 2.1.9 1.9-.5 1.2-2 .7v3l2 .7.5 1.2-.9 1.9 2.1 2.1 1.9-.9 1.2.5.7 2h3l.7-2 1.2-.5 1.9.9 2.1-2.1-.9-1.9.5-1.2z"
+        ></path>
+      </symbol>
+      <symbol id="icon-exit" viewbox="0 0 24 24">
+        <path d="M10 4H4v16h6M14 8l4 4-4 4M8 12h10"></path>
+      </symbol>
+      <symbol id="icon-backup" viewbox="0 0 24 24">
+        <path d="M5 4h14v5H5zM4 9h16v11H4zM9 14h6M12 11v6"></path>
+      </symbol>
+      <symbol id="icon-clear" viewbox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18"></path>
+      </symbol>
+      <symbol id="icon-open" viewbox="0 0 24 24">
+        <path d="M14 5h5v5M19 5l-8 8M18 13v6H5V6h6"></path>
+      </symbol>
+      <symbol id="icon-edit" viewbox="0 0 24 24">
+        <path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"></path>
+      </symbol>
+      <symbol id="icon-up" viewbox="0 0 24 24">
+        <path d="m6 15 6-6 6 6"></path>
+      </symbol>
+      <symbol id="icon-down" viewbox="0 0 24 24">
+        <path d="m6 9 6 6 6-6"></path>
+      </symbol>
+      <symbol id="icon-lock" viewbox="0 0 24 24">
+        <rect height="11" rx="2" width="14" x="5" y="10"></rect>
+        <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+      </symbol>
+      <symbol id="icon-unlock" viewbox="0 0 24 24">
+        <rect height="11" rx="2" width="14" x="5" y="10"></rect>
+        <path d="M8 10V7a4 4 0 0 1 7-2.6"></path>
+      </symbol>
+      <symbol id="icon-tag" viewbox="0 0 24 24">
+        <path d="M3 12V4h8l10 10-7 7z"></path>
+        <circle cx="8" cy="8" r="1"></circle>
+      </symbol>
+      <symbol id="icon-archive" viewbox="0 0 24 24">
+        <path d="M4 7h16v14H4zM3 3h18v4H3zM9 12h6"></path>
+      </symbol>
+      <symbol id="icon-restore" viewbox="0 0 24 24">
+        <path d="M4 7h16v14H4zM3 3h18v4H3zM12 17v-6M9 14l3-3 3 3"></path>
+      </symbol>
+      <symbol id="icon-fields" viewbox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+        <circle cx="8" cy="6" r="2"></circle>
+        <circle cx="15" cy="12" r="2"></circle>
+        <circle cx="11" cy="18" r="2"></circle>
+      </symbol>
+    </svg>
+    <header class="app-header">
+      <div class="header-content">
+        <div>
+          <p class="eyebrow"></p>
+          <h1 id="app-title">نظام إدخال البيانات</h1>
+          <p class="header-description" id="app-description">
+            أنشئ بنية التطبيق مرة واحدة، ثم استخدمها لإدخال السجلات والبحث فيها.
+          </p>
+        </div>
+        <div class="header-side">
+          <nav aria-label="وضع التطبيق" class="mode-switch">
+            <button
+              class="mode-button mode-button-active"
+              data-mode="entry"
+              id="entry-mode-button"
+              type="button"
+            >
+              <svg aria-hidden="true" class="action-icon">
+                <use href="#icon-new"></use>
+              </svg>
+              إدخال البيانات
+            </button>
+            <button
+              class="mode-button"
+              data-mode="builder"
+              id="builder-mode-button"
+              type="button"
+            >
+              <svg aria-hidden="true" class="action-icon">
+                <use href="#icon-settings"></use>
+              </svg>
+              تصميم التطبيق
+            </button>
+          </nav>
+          <div class="header-actions">
+            <div class="status status-loading" id="app-status" role="status">
+              <span aria-hidden="true" class="status-dot"></span>
+              <span id="app-status-text">جاري فتح التطبيق…</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-scroll-content">
+        <noscript>
+          <div class="message message-error">
+            يجب تفعيل JavaScript لتشغيل التطبيق.
+          </div>
+        </noscript>
+        <div class="message message-error" hidden="" id="startup-error">
+          <strong>تعذّر فتح التطبيق.</strong>
+          <span id="startup-error-message"></span>
+        </div>
+        <div class="app-workspace" data-mode="entry" id="app-workspace">
+          <aside
+            aria-label="التنقل بين فئات التطبيق"
+            class="workspace-sidebar workspace-category-navigator"
+            id="category-navigator"
+          >
+            <div class="category-navigator-heading">
+              <h2 id="category-nav-title">فئات السجل</h2>
+              <button
+                class="button button-primary"
+                id="builder-sidebar-add-category-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-plus"></use>
+                </svg>
+                إضافة فئة
+              </button>
+            </div>
+            <nav
+              aria-label="فئات التطبيق"
+              class="category-nav-list"
+              id="builder-category-nav-list"
+            ></nav>
+          </aside>
+          <div class="workspace-main">
+            <section id="entry-view">
+              <section
+                aria-labelledby="search-title"
+                class="search-panel"
+                hidden=""
+                id="search-panel"
+              >
+                <div class="section-heading">
+                  <div class="search-title-row">
+                    <h2 id="search-title">البحث عن سجل</h2>
+                    <button
+                      aria-expanded="true"
+                      aria-label="طي لوحة البحث"
+                      class="button button-icon search-collapse-button"
+                      id="search-collapse-button"
+                      title="طي لوحة البحث"
+                      type="button"
+                    >
+                      <svg aria-hidden="true" class="action-icon">
+                        <use href="#icon-up"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="search-heading-actions">
+                    <button
+                      aria-label="اختيار حقول البحث"
+                      class="button button-secondary search-icon-button"
+                      id="choose-search-fields-button"
+                      title="اختيار حقول البحث"
+                      type="button"
+                    >
+                      <svg aria-hidden="true" class="action-icon">
+                        <use href="#icon-settings"></use>
+                      </svg>
+                      <span class="visually-hidden" id="choose-search-fields-text"
+                        >حقول البحث: الافتراضية</span
+                      >
+                    </button>
+                    <label class="check-field search-archive-toggle">
+                      <input id="include-archived-search" type="checkbox" />
+                      <span>إظهار المؤرشفة</span>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="builder-empty search-fields-empty"
+                  hidden=""
+                  id="search-fields-empty"
+                >
+                  لا توجد حقول بحث افتراضية. اختر حقولًا لهذا البحث فقط.
+                </div>
+                <div class="search-fields" id="search-fields"></div>
+                <div class="search-actions">
+                  <button
+                    aria-label="مسح البحث"
+                    class="button button-secondary search-icon-button"
+                    id="clear-search-button"
+                    title="مسح البحث"
+                    type="button"
+                  >
+                    <svg aria-hidden="true" class="action-icon">
+                      <use href="#icon-clear"></use>
+                    </svg>
+                    <span class="visually-hidden">مسح البحث</span>
+                  </button>
+                  <button
+                    aria-label="بحث"
+                    class="button button-primary search-icon-button"
+                    id="search-button"
+                    title="بحث"
+                    type="button"
+                  >
+                    <svg aria-hidden="true" class="action-icon">
+                      <use href="#icon-search"></use>
+                    </svg>
+                    <span class="visually-hidden" id="search-button-text">بحث</span>
+                    <span
+                      aria-hidden="true"
+                      class="spinner"
+                      hidden=""
+                      id="search-spinner"
+                    ></span>
+                  </button>
+                </div>
+                <div class="search-results-heading">
+                  <strong>النتائج المحتملة</strong>
+                  <span id="search-summary"
+                    >أدخل معيارًا واحدًا أو أكثر ثم اضغط بحث.</span
+                  >
+                </div>
+                <div
+                  aria-live="polite"
+                  class="search-results"
+                  id="search-results"
+                ></div>
+                <div class="search-result-pager" hidden id="search-result-pager">
+                  <button
+                    aria-label="النتيجة السابقة"
+                    class="button button-secondary"
+                    id="previous-search-result"
+                    type="button"
+                  >
+                    السابق
+                  </button>
+                  <span id="search-result-position"></span>
+                  <button
+                    aria-label="النتيجة التالية"
+                    class="button button-secondary"
+                    id="next-search-result"
+                    type="button"
+                  >
+                    التالي
+                  </button>
+                </div>
+              </section>
+              <section class="empty-state" hidden="" id="empty-schema-panel">
+                <div aria-hidden="true" class="empty-icon">＋</div>
+                <p class="section-kicker">التطبيق فارغ وجاهز</p>
+                <h2>ابدأ بإضافة أول فئة وأول حقل</h2>
+                <p>
+                  لا توجد فئات أو حقول جاهزة. صمّم البنية التي تناسب استخدامك،
+                  ثم سيُنشأ نموذج الإدخال والبحث تلقائيًا.
+                </p>
+                <button
+                  class="button button-primary"
+                  id="open-builder-button"
+                  type="button"
+                >
+                  <svg aria-hidden="true" class="action-icon">
+                    <use href="#icon-settings"></use>
+                  </svg>
+                  فتح مصمّم التطبيق
+                </button>
+              </section>
+              <form hidden="" id="record-form" novalidate="">
+                <input id="record-code" readonly="" type="hidden" />
+                <div
+                  aria-live="polite"
+                  class="section-list"
+                  id="main-sections"
+                ></div>
+                <section
+                  class="related-area"
+                  hidden=""
+                  id="unanchored-related-area"
+                >
+                  <div class="section-heading">
+                    <div>
+                      <h2>فئات إضافية</h2>
+                    </div>
+                  </div>
+                  <div
+                    class="section-list"
+                    id="unanchored-related-sections"
+                  ></div>
+                </section>
+                <section
+                  class="attachment-gallery"
+                  hidden=""
+                  id="attachment-gallery"
+                >
+                  <div class="section-heading">
+                    <div>
+                      <h2>ملفات وصور السجل</h2>
+                    </div>
+                  </div>
+                  <div
+                    class="attachment-gallery-grid"
+                    id="attachment-gallery-grid"
+                  ></div>
+                </section>
+              </form>
+            </section>
+            <section hidden="" id="builder-view">
+              <div class="builder-intro" id="builder-intro-panel" tabindex="-1">
+                <div>
+                  <p class="section-kicker">مصمّم التطبيق</p>
+                  <h2>ابنِ النموذج من دون تعديل الكود</h2>
+                  <p>
+                    الفئات والحقول والشروط أدناه هي المصدر الوحيد للنموذج. تحفظ
+                    الأسماء الداخلية الثابتة البيانات عند إعادة التسمية أو
+                    الترتيب.
+                  </p>
+                </div>
+                <div aria-label="إحصاءات البنية" class="builder-stats">
+                  <span><b id="category-count">0</b> فئة</span>
+                  <span><b id="field-count">0</b> حقل</span>
+                  <span><b id="record-count">0</b> سجل محفوظ</span>
+                </div>
+              </div>
+              <section class="builder-panel" id="builder-identity-panel" tabindex="-1">
+                <div class="panel-heading">
+                  <div>
+                    <h3>هوية التطبيق</h3>
+                    <p>غيّر الاسم والكلمات التي يراها المستخدم النهائي.</p>
+                  </div>
+                </div>
+                <div class="field-grid compact-grid">
+                  <div class="field">
+                    <label for="setting-title">اسم التطبيق</label>
+                    <input class="control" id="setting-title" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="setting-singular">اسم السجل بالمفرد</label>
+                    <input class="control" id="setting-singular" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="setting-plural">اسم السجلات بالجمع</label>
+                    <input class="control" id="setting-plural" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="setting-primary-color">اللون الأساسي</label>
+                    <input
+                      class="control color-control"
+                      id="setting-primary-color"
+                      type="color"
+                    />
+                  </div>
+                </div>
+              </section>
+              <section class="builder-panel" id="builder-categories-panel" tabindex="-1">
+                <div class="panel-heading">
+                  <div>
+                    <h3>الفئات والحقول</h3>
+                    <p>
+                      الفئة الرئيسية تظهر مرة واحدة في السجل، والفئة المتكررة
+                      تسمح بإضافة بطاقات متعددة مع minor_id متسلسل.
+                    </p>
+                  </div>
+                </div>
+                <div class="builder-categories" id="builder-categories"></div>
+                <div class="builder-empty" id="no-categories-message">
+                  لا توجد فئات بعد. أضف فئة رئيسية أو متكررة للبدء.
+                </div>
+              </section>
+              <section class="builder-conditions-panel" id="builder-conditions-panel" tabindex="-1">
+                <div class="condition-list" id="builder-conditions"></div>
+                <div class="builder-empty" id="no-conditions-message">
+                  لا توجد شروط. كل الفئات والحقول ظاهرة دائمًا.
+                </div>
+              </section>
+            </section>
+          </div>
+          <aside
+            aria-label="إجراءات التطبيق"
+            class="workspace-sidebar workspace-action-sidebar"
+            id="workspace-action-sidebar"
+          >
+            <section
+              class="mode-action-rail entry-action-rail"
+              id="entry-action-rail"
+            >
+              <div class="entry-record-panel">
+              <div class="action-rail-status">
+                <p class="section-kicker">إجراءات السجل</p>
+                <p class="save-note" id="save-note">
+                  يمكن الحفظ في أي وقت ما لم تُعرَّف حقول مطلوبة.
+                </p>
+                <p class="draft-status" id="draft-status">
+                  لا توجد مسودة محلية.
+                </p>
+              </div>
+              <div class="action-rail-buttons" id="entry-record-actions">
+                <button
+                  class="button button-primary"
+                  id="save-record-button"
+                  type="button"
+                >
+                  <svg aria-hidden="true" class="action-icon">
+                    <use href="#icon-save"></use>
+                  </svg>
+                  <span id="save-button-text">حفظ السجل</span>
+                  <span
+                    aria-hidden="true"
+                    class="spinner"
+                    hidden=""
+                    id="save-spinner"
+                  ></span></button
+                ><button
+                  class="button button-secondary"
+                  form="record-form"
+                  id="reset-form-button"
+                  type="reset"
+                >
+                  <svg aria-hidden="true" class="action-icon">
+                    <use href="#icon-new"></use>
+                  </svg>
+                  <span id="reset-button-text">سجل جديد</span></button
+                ><button
+                  class="button button-secondary"
+                  hidden=""
+                  id="archive-record-button"
+                  type="button"
+                >
+                  <svg aria-hidden="true" class="action-icon">
+                    <use href="#icon-archive"></use>
+                  </svg>
+                  <span id="archive-button-text">أرشفة السجل</span></button
+                ><button
+                  class="button button-danger"
+                  hidden=""
+                  id="delete-record-button"
+                  type="button"
+                >
+                  <svg aria-hidden="true" class="action-icon">
+                    <use href="#icon-trash"></use>
+                  </svg>
+                  <span id="delete-button-text">حذف السجل نهائيًا</span>
+                </button>
+              </div>
+              <div class="action-rail-divider"></div>
+              <button
+                class="button button-quiet application-close-button"
+                id="close-app-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-exit"></use>
+                </svg>
+                إغلاق البرنامج
+              </button>
+              </div>
+            </section>
+            <aside
+              aria-label="إجراءات المصمّم"
+              class="mode-action-rail builder-action-rail"
+              hidden=""
+              id="builder-action-rail"
+            >
+              <div class="builder-action-status">
+                <p class="section-kicker">حالة التصميم</p>
+                <strong id="builder-save-state">
+                  لا توجد تغييرات غير محفوظة.
+                </strong>
+                <small>
+                  يُحدَّث ملف Excel مع الحفاظ على السجلات الحالية.
+                </small>
+              </div>
+              <button
+                class="button button-primary"
+                id="save-schema-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-save"></use>
+                </svg>
+                <span id="save-schema-text">حفظ تصميم التطبيق</span>
+                <span
+                  aria-hidden="true"
+                  class="spinner"
+                  hidden=""
+                  id="schema-spinner"
+                ></span>
+              </button>
+              <button
+                class="button button-secondary"
+                id="discard-schema-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-clear"></use>
+                </svg>
+                تجاهل التغييرات
+              </button>
+              <button
+                class="button button-secondary"
+                id="backup-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-backup"></use>
+                </svg>
+                إنشاء نسخة احتياطية
+              </button>
+              <div class="builder-action-divider"></div>
+              <button
+                class="button button-quiet builder-close-button"
+                id="builder-close-app-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-exit"></use>
+                </svg>
+                إغلاق البرنامج
+              </button>
+            </aside>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <dialog class="editor-dialog" id="category-dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="section-kicker">تعريف فئة</p>
+          <h2 id="category-dialog-title">إضافة فئة</h2>
+        </div>
+        <button
+          aria-label="إغلاق"
+          class="dialog-close"
+          data-close-dialog="category-dialog"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-content">
+        <div class="field-grid compact-grid">
+          <div class="field">
+            <label for="category-label">اسم الفئة</label>
+            <input class="control" id="category-label" type="text" />
+          </div>
+          <div class="field">
+            <label for="category-kind">نوع الفئة</label>
+            <select class="control" id="category-kind">
+              <option value="main">رئيسية — مرة واحدة في السجل</option>
+              <option value="repeatable">متكررة — عدة بطاقات</option>
+            </select>
+          </div>
+          <label class="field field-full" id="category-placement-wrapper">
+            <span>مكان الفئة الجديدة</span>
+            <select class="control" id="category-placement"></select>
+            <small class="field-help">
+              اختر موضع الفئة مباشرة بدل نقلها لاحقًا باستخدام الأسهم.
+            </small>
+          </label>
+          <label class="field field-full">
+            <span>دمج ضمن فئة أم</span>
+            <select class="control" id="category-parent">
+              <option value="">بلا فئة أم</option>
+            </select>
+            <small class="field-help">
+              ضع الفئة تحت فئة أخرى لتظهر ضمنها في شجرة التنقل، مع بقاء
+              بيانات كل فئة مستقلة.
+            </small>
+          </label>
+          <div class="field field-full">
+            <label for="category-description">وصف قصير</label>
+            <textarea
+              class="control"
+              id="category-description"
+              rows="2"
+            ></textarea>
+          </div>
+          <div
+            class="field-grid field-full compact-grid"
+            hidden=""
+            id="category-repeatable-options"
+          >
+            <div class="field">
+              <label for="category-add-label">نص زر الإضافة</label>
+              <input class="control" id="category-add-label" type="text" />
+            </div>
+            <div class="field">
+              <label for="category-anchor">إظهار الفئة مباشرة تحت</label>
+              <select class="control" id="category-anchor">
+                <option value="">في نهاية النموذج</option>
+              </select>
+            </div>
+            <label class="check-field field-full">
+              <input id="category-auto-start" type="checkbox" />
+              <span>ابدأ ببطاقة فارغة تلقائيًا</span>
+            </label>
+            <label class="check-field field-full">
+              <input id="category-related-person" type="checkbox" />
+              <span>تمثل بطاقات هذه الفئة أشخاصًا مرتبطين بسجلات أخرى</span>
+            </label>
+            <small class="field-help field-full">
+              يضيف خانة لإدخال ID الشخص المرتبط، ثم ينسخ الحقول التي تحددها
+              في إعداد كل حقل.
+            </small>
+            <section class="sub-editor field-full marker-editor">
+              <div class="sub-editor-heading">
+                <div>
+                  <h3>وسوم البطاقات</h3>
+                  <p>
+                    مثل «الحالي» أو «الرئيسي»، مع قاعدة تحدد عدد مرات اختياره.
+                  </p>
+                </div>
+              </div>
+              <div class="field-grid compact-grid">
+                <div class="field">
+                  <label for="marker-label">اسم الوسم</label
+                  ><input
+                    class="control"
+                    id="marker-label"
+                    placeholder="الحالي"
+                    type="text"
+                  />
+                </div>
+                <div class="field">
+                  <label for="marker-display-text">النص الظاهر</label
+                  ><input
+                    class="control"
+                    id="marker-display-text"
+                    placeholder="# الحالي"
+                    type="text"
+                  />
+                </div>
+                <div class="field">
+                  <label for="marker-color">لون الوسم</label
+                  ><input
+                    class="control color-control"
+                    id="marker-color"
+                    type="color"
+                    value="#0F766E"
+                  />
+                </div>
+                <div class="field">
+                  <label for="marker-rule">قاعدة الاختيار</label
+                  ><select class="control" id="marker-rule">
+                    <option value="independent">مستقل — عدة بطاقات</option>
+                    <option value="at_most_one">مرة واحدة كحد أقصى</option>
+                    <option value="exactly_one_when_rows">
+                      بطاقة واحدة عند وجود بطاقات
+                    </option>
+                    <option value="exactly_one_always">
+                      بطاقة واحدة دائمًا
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <button
+                class="button button-secondary"
+                id="add-marker-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-tag"></use></svg
+                ><span id="add-marker-button-text">إضافة وسم</span>
+              </button>
+              <div class="file-parts-list" id="category-markers-list"></div>
+            </section>
+          </div>
+        </div>
+        <section class="dialog-subsection condition-editor-section">
+          <div class="dialog-section-heading">
+            <div>
+              <h3>شروط ظهور الفئة</h3>
+              <p class="dialog-note">
+                تظهر الفئة عندما تتحقق إحدى مجموعات الشروط.
+              </p>
+            </div>
+            <button
+              class="button button-secondary"
+              id="add-category-condition-button"
+              type="button"
+            >
+              إضافة شرط ظهور
+            </button>
+          </div>
+          <div
+            class="target-conditions-list"
+            id="category-conditions-list"
+          ></div>
+        </section>
+      </div>
+      <div class="dialog-actions">
+        <button
+          class="button button-secondary"
+          data-close-dialog="category-dialog"
+          type="button"
+        >
+          إلغاء
+        </button>
+        <button
+          class="button button-primary"
+          id="confirm-category-button"
+          type="button"
+        >
+          حفظ الفئة
+        </button>
+      </div>
+    </dialog>
+    <dialog class="editor-dialog editor-dialog-wide" id="field-dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="section-kicker">تعريف حقل</p>
+          <h2 id="field-dialog-title">إضافة حقل</h2>
+        </div>
+        <button
+          aria-label="إغلاق"
+          class="dialog-close"
+          data-close-dialog="field-dialog"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-content">
+        <div class="field-grid compact-grid">
+          <div class="field">
+            <label for="field-label">اسم الحقل</label>
+            <input class="control" id="field-label" type="text" />
+          </div>
+          <div class="field">
+            <label for="field-type">نوع الحقل</label>
+            <select class="control" id="field-type">
+              <option value="text">نص قصير</option>
+              <option value="textarea">نص طويل</option>
+              <option value="number">رقم</option>
+              <option value="select">قائمة خيارات</option>
+              <option value="checkbox">مربع اختيار واحد</option>
+              <option value="checkbox_group">مجموعة مربعات اختيار</option>
+              <option value="yes_no">نعم / لا</option>
+              <option value="date_gregorian">تاريخ ميلادي</option>
+              <option value="date_hijri">تاريخ هجري</option>
+              <option value="date_persian">تاريخ هجري شمسي</option>
+              <option value="file">ملف أو مرفق</option>
+              <option value="system_record_code">معرّف السجل — للعرض فقط</option>
+              <option value="system_created_at">تاريخ الإنشاء — للعرض فقط</option>
+              <option value="system_updated_at">تاريخ آخر تعديل — للعرض فقط</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="field-placeholder">نص مساعد داخل الحقل</label>
+            <input class="control" id="field-placeholder" type="text" />
+          </div>
+          <div class="field">
+            <label for="field-width">عرض الحقل</label>
+            <select class="control" id="field-width">
+              <option value="normal">عادي</option>
+              <option value="wide">واسع</option>
+              <option value="full">سطر كامل</option>
+            </select>
+          </div>
+          <div class="field field-full" hidden="" id="field-options-wrapper">
+            <label for="field-options">الخيارات — خيار في كل سطر</label>
+            <textarea class="control" id="field-options" rows="5"></textarea>
+          </div>
+          <label class="check-field">
+            <input id="field-required" type="checkbox" />
+            <span>حقل مطلوب</span>
+          </label>
+          <label class="check-field" id="field-unique-wrapper">
+            <input id="field-unique" type="checkbox" />
+            <span>يجب أن تكون قيمته فريدة</span>
+          </label>
+          <label class="check-field" id="field-searchable-wrapper">
+            <input id="field-searchable" type="checkbox" />
+            <span>استخدامه افتراضيًا في لوحة البحث</span>
+          </label>
+          <div class="field" hidden="" id="field-search-match-wrapper">
+            <label for="field-search-match">طريقة المطابقة</label>
+            <select class="control" id="field-search-match">
+              <option value="contains">يحتوي على النص</option>
+              <option value="exact">مطابقة تامة</option>
+            </select>
+          </div>
+          <label class="check-field" id="field-result-wrapper">
+            <input id="field-show-result" type="checkbox" />
+            <span>إظهاره في بطاقة نتيجة البحث</span>
+          </label>
+          <label class="check-field" id="field-title-wrapper">
+            <input id="field-result-title" type="checkbox" />
+            <span>استخدامه في عنوان بطاقة النتيجة</span>
+          </label>
+        </div>
+        <section
+          class="sub-editor"
+          hidden=""
+          id="related-person-field-editor"
+        >
+          <div class="sub-editor-heading">
+            <div>
+              <h3>النسخ من سجل الشخص المرتبط</h3>
+              <p>
+                اختر حقلًا رئيسيًا من سجل الشخص ليملأ هذا الحقل تلقائيًا بعد
+                إدخال ID.
+              </p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="related-person-source-field">حقل المصدر</label>
+            <select class="control" id="related-person-source-field">
+              <option value="">لا تنسخ قيمة تلقائيًا</option>
+            </select>
+          </div>
+        </section>
+        <section class="sub-editor" hidden="" id="option-filter-editor">
+          <div class="sub-editor-heading">
+            <div>
+              <h3>تصفية الخيارات حسب حقل آخر</h3>
+              <p>لاختيار القيم المتاحة في هذه القائمة وفق قيمة حقل متحكم.</p>
+            </div>
+          </div>
+          <div class="field-grid compact-grid">
+            <div class="field field-full">
+              <label for="option-filter-source">الحقل المتحكم</label
+              ><select class="control" id="option-filter-source">
+                <option value="">بدون تصفية</option>
+              </select>
+            </div>
+            <div
+              class="field field-full option-filter-matrix"
+              id="option-filter-matrix"
+            ></div>
+          </div>
+        </section>
+        <section class="sub-editor" id="field-validation-editor">
+          <div class="sub-editor-heading">
+            <div>
+              <h3>قيود التحقق</h3>
+              <p>قيود بسيطة تُفحص في الواجهة وفي الخادم.</p>
+            </div>
+          </div>
+          <div
+            class="field-grid compact-grid"
+            hidden=""
+            id="text-validation-fields"
+          >
+            <div class="field">
+              <label for="validation-min-length">أقل عدد أحرف</label
+              ><input
+                class="control"
+                id="validation-min-length"
+                min="0"
+                type="number"
+              />
+            </div>
+            <div class="field">
+              <label for="validation-max-length">أكبر عدد أحرف</label
+              ><input
+                class="control"
+                id="validation-max-length"
+                min="0"
+                type="number"
+              />
+            </div>
+            <div class="field field-full">
+              <label for="validation-pattern">نمط Regex اختياري</label
+              ><input
+                class="control"
+                dir="ltr"
+                id="validation-pattern"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="field-grid compact-grid"
+            hidden=""
+            id="number-validation-fields"
+          >
+            <div class="field">
+              <label for="validation-min-number">أقل قيمة</label
+              ><input
+                class="control"
+                id="validation-min-number"
+                step="any"
+                type="number"
+              />
+            </div>
+            <div class="field">
+              <label for="validation-max-number">أكبر قيمة</label
+              ><input
+                class="control"
+                id="validation-max-number"
+                step="any"
+                type="number"
+              />
+            </div>
+            <label class="check-field"
+              ><input id="validation-integer-only" type="checkbox" /><span
+                >عدد صحيح فقط</span
+              ></label
+            >
+          </div>
+          <div
+            class="field-grid compact-grid"
+            hidden=""
+            id="date-validation-fields"
+          >
+            <div class="field">
+              <label for="validation-min-date">أقدم تاريخ</label
+              ><input
+                class="control"
+                dir="ltr"
+                id="validation-min-date"
+                placeholder="YYYY-MM-DD"
+                type="text"
+              />
+            </div>
+            <div class="field">
+              <label for="validation-max-date">أحدث تاريخ</label
+              ><input
+                class="control"
+                dir="ltr"
+                id="validation-max-date"
+                placeholder="YYYY-MM-DD"
+                type="text"
+              />
+            </div>
+            <div class="field">
+              <label for="validation-compare-field">مقارنة مع حقل</label
+              ><select class="control" id="validation-compare-field">
+                <option value="">بدون مقارنة</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="validation-compare-operator">العلاقة</label
+              ><select class="control" id="validation-compare-operator">
+                <option value="after">بعد</option>
+                <option value="before">قبل</option>
+                <option value="on_or_after">في أو بعد</option>
+                <option value="on_or_before">في أو قبل</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="sub-editor" hidden="" id="file-naming-editor">
+          <label
+            class="check-field profile-image-option"
+            id="file-profile-image-wrapper"
+          >
+            <input id="file-profile-image" type="checkbox" />
+            <span>
+              عرض هذا المرفق كصورة شخصية في يسار فئة المعلومات الرئيسية
+            </span>
+          </label>
+          <div class="sub-editor-heading">
+            <div>
+              <h3>تسمية الملفات</h3>
+              <p>
+                يحفظ الامتداد الأصلي والبايتات كما هي، ويضيف عدادًا عند التكرار.
+              </p>
+            </div>
+            <select class="control compact-control" id="file-naming-mode">
+              <option value="original">الاحتفاظ باسم الملف الأصلي</option>
+              <option value="template">إنشاء الاسم من حقول السجل</option>
+            </select>
+          </div>
+          <div hidden="" id="file-template-editor">
+            <div class="template-add-row">
+              <div class="field">
+                <label for="file-part-prefix">النص قبل قيمة الحقل</label>
+                <input
+                  class="control"
+                  id="file-part-prefix"
+                  maxlength="30"
+                  placeholder="مثال: وثيقة-"
+                  type="text"
+                />
+              </div>
+              <div class="field">
+                <label for="file-part-field">الحقل المستخدم</label>
+                <select class="control" id="file-part-field"></select>
+              </div>
+              <div class="field">
+                <label for="file-part-suffix">النص بعد قيمة الحقل</label>
+                <input
+                  class="control"
+                  id="file-part-suffix"
+                  maxlength="30"
+                  placeholder="مثال: -شهادة"
+                  type="text"
+                />
+              </div>
+              <button
+                class="button button-secondary"
+                id="add-file-part-button"
+                type="button"
+              >
+                <svg aria-hidden="true" class="action-icon">
+                  <use href="#icon-plus"></use>
+                </svg>
+                إضافة جزء
+              </button>
+            </div>
+            <div class="file-parts-list" id="file-parts-list"></div>
+          </div>
+        </section>
+        <section class="dialog-subsection condition-editor-section">
+          <div class="dialog-section-heading">
+            <div>
+              <h3>شروط ظهور الحقل</h3>
+              <p class="dialog-note">
+                تظهر قيمة الحقل عندما تتحقق إحدى مجموعات الشروط.
+              </p>
+            </div>
+            <button
+              class="button button-secondary"
+              id="add-field-condition-button"
+              type="button"
+            >
+              إضافة شرط ظهور
+            </button>
+          </div>
+          <div class="target-conditions-list" id="field-conditions-list"></div>
+        </section>
+      </div>
+      <div class="dialog-actions">
+        <button
+          class="button button-secondary"
+          data-close-dialog="field-dialog"
+          type="button"
+        >
+          إلغاء
+        </button>
+        <button
+          class="button button-primary"
+          id="confirm-field-button"
+          type="button"
+        >
+          حفظ الحقل
+        </button>
+      </div>
+    </dialog>
+    <dialog class="editor-dialog" id="condition-dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="section-kicker">شرط ظهور</p>
+          <h2 id="condition-dialog-title">إضافة شرط</h2>
+        </div>
+        <button
+          aria-label="إغلاق"
+          class="dialog-close"
+          data-close-dialog="condition-dialog"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-content">
+        <div class="dialog-grid">
+          <div class="field field-full">
+            <span>العنصر الذي سيتحكم الشرط في ظهوره</span>
+            <strong
+              class="condition-target-label"
+              id="condition-target-label"
+            ></strong>
+          </div>
+          <label class="field field-full">
+            <span>الحقل المتحكم</span>
+            <select class="control" id="condition-source"></select>
+          </label>
+          <label class="field">
+            <span>العملية</span>
+            <select class="control" id="condition-operator"></select>
+          </label>
+          <label class="field">
+            <span>مجموعة الشروط</span>
+            <select class="control" id="condition-group"></select>
+          </label>
+          <label class="check-field field-full condition-negate-control">
+            <input id="condition-negate" type="checkbox" />
+            <span>عكس نتيجة هذا الشرط — NOT</span>
+          </label>
+          <div class="field field-full" id="condition-value-wrapper">
+            <span>القيمة</span>
+            <div id="condition-value-control"></div>
+          </div>
+          <p class="dialog-note field-full">
+            جميع الشروط داخل المجموعة نفسها مرتبطة بـ AND، والمجموعات المختلفة
+            مرتبطة بـ OR.
+          </p>
+        </div>
+      </div>
+      <div class="dialog-actions">
+        <button
+          class="button button-secondary"
+          data-close-dialog="condition-dialog"
+          type="button"
+        >
+          إلغاء
+        </button>
+        <button
+          class="button button-primary"
+          id="confirm-condition-button"
+          type="button"
+        >
+          حفظ الشرط
+        </button>
+      </div>
+    </dialog>
+    <dialog class="editor-dialog" id="search-fields-dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="section-kicker">بحث مؤقت</p>
+          <h2>اختيار حقول البحث</h2>
+        </div>
+        <button
+          aria-label="إغلاق"
+          class="dialog-close"
+          data-close-dialog="search-fields-dialog"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-content">
+        <p class="dialog-note">
+          هذا الاختيار يخص جلسة التشغيل الحالية فقط، ولا يغيّر الحقول الافتراضية
+          التي حددها المصمّم.
+        </p>
+        <div class="search-field-picker-tools">
+          <button
+            class="button button-quiet"
+            id="select-all-search-fields-button"
+            type="button"
+          >
+            تحديد الكل
+          </button>
+          <button
+            class="button button-quiet"
+            id="clear-all-search-fields-button"
+            type="button"
+          >
+            إلغاء تحديد الكل
+          </button>
+        </div>
+        <div class="search-field-options" id="search-field-options"></div>
+      </div>
+      <div class="dialog-actions">
+        <button
+          class="button button-secondary"
+          id="reset-search-fields-button"
+          type="button"
+        >
+          العودة إلى الافتراضية
+        </button>
+        <button
+          class="button button-secondary"
+          data-close-dialog="search-fields-dialog"
+          type="button"
+        >
+          إلغاء
+        </button>
+        <button
+          class="button button-primary"
+          id="apply-search-fields-button"
+          type="button"
+        >
+          تطبيق لهذه الجلسة
+        </button>
+      </div>
+    </dialog>
+    <dialog class="editor-dialog" id="builder-auth-dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="section-kicker">حماية المصمّم</p>
+          <h2 id="builder-auth-title">فتح المصمّم</h2>
+        </div>
+        <button
+          aria-label="إغلاق"
+          class="dialog-close"
+          data-close-dialog="builder-auth-dialog"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-content">
+        <p class="dialog-note" id="builder-auth-note"></p>
+        <div class="field-grid compact-grid">
+          <div class="field field-full" hidden="" id="current-password-wrapper">
+            <label for="current-builder-password">كلمة المرور الحالية</label
+            ><input
+              autocomplete="current-password"
+              class="control"
+              dir="ltr"
+              id="current-builder-password"
+              spellcheck="false"
+              type="password"
+            />
+          </div>
+          <div class="field field-full">
+            <label for="builder-password">كلمة المرور</label
+            ><input
+              autocomplete="current-password"
+              class="control"
+              dir="ltr"
+              id="builder-password"
+              spellcheck="false"
+              type="password"
+            />
+          </div>
+          <div class="field field-full" hidden="" id="confirm-password-wrapper">
+            <label for="confirm-builder-password"
+              >تأكيد كلمة المرور الجديدة</label
+            ><input
+              autocomplete="new-password"
+              class="control"
+              dir="ltr"
+              id="confirm-builder-password"
+              spellcheck="false"
+              type="password"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="dialog-actions">
+        <button
+          class="button button-secondary"
+          data-close-dialog="builder-auth-dialog"
+          type="button"
+        >
+          إلغاء</button
+        ><button
+          aria-live="polite"
+          class="button button-primary"
+          id="confirm-builder-auth-button"
+          type="button"
+        >
+          <svg aria-hidden="true" class="action-icon">
+            <use href="#icon-unlock"></use></svg
+          ><span id="confirm-builder-auth-text">فتح المصمّم</span>
+          <span
+            aria-hidden="true"
+            class="spinner"
+            hidden=""
+            id="builder-auth-spinner"
+          ></span>
+        </button>
+      </div>
+    </dialog>
+    <div
+      aria-live="polite"
+      class="toast"
+      id="toast"
+      popover="manual"
+      role="status"
+    ></div>
+  </body>
+</html>
