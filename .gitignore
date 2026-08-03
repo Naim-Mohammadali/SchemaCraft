@@ -63,8 +63,7 @@ Source/data/backups/
 Thumbs.db
 desktop.ini
 
-# Release archives
-Assets/*.zip
+
 *.7z
 *.rar
 *.tar
